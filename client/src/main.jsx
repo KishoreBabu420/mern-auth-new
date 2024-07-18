@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom/client';
 
 import App from './app';
 
+import { store } from './redux/store';
+import { Provider } from 'react-redux';
+
 const rootElement = ReactDOM.createRoot(document.getElementById('root'));
 
 rootElement.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
 );
