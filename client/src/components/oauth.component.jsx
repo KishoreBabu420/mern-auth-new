@@ -1,6 +1,9 @@
+import { signInWithGooglePopup } from '../utils/firebase';
+
 const OAuth = () => {
   const clickHandler = async () => {
-    //
+    const user = await signInWithGooglePopup();
+    console.log(user);
   };
   return (
     <button
